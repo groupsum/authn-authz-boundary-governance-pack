@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:authorization-audit-and-evidence-contract",
+  "number": 2016,
+  "slug": "authorization-audit-and-evidence-contract",
+  "title": "Authorization Audit And Evidence Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines authorization audit logging and release evidence requirements.",
+  "body": "A conforming repository captures subject, actor, resource, action, decision, policy version, attributes used, token or session reference, correlation identifier, and enforcement point for sensitive allow and deny decisions. Evidence must support release and incident review.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://www.rfc-editor.org/rfc/rfc6749",
+    "https://www.rfc-editor.org/rfc/rfc9068",
+    "https://www.rfc-editor.org/rfc/rfc9700",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
+    "https://docs.cedarpolicy.com/",
+    "https://www.openpolicyagent.org/docs/policy-language"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "authnz",
+    "authorization",
+    "governance"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": []
+}

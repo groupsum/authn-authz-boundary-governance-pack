@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "adr",
+  "id": "adr:pip-and-attribute-sources-are-authoritative-inputs-not-hidden-logic",
+  "number": 1006,
+  "slug": "pip-and-attribute-sources-are-authoritative-inputs-not-hidden-logic",
+  "title": "PIP And Attribute Sources Are Authoritative Inputs Not Hidden Logic",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Policy information sources must be declared as inputs rather than hidden authorization logic.",
+  "body": "Repositories must identify sources for identity attributes, group membership, roles, entitlements, relationships, tenant data, device state, risk signals, and resource classifications. Missing, stale, or conflicting attributes must have defined authorization behavior.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://www.rfc-editor.org/rfc/rfc6749",
+    "https://www.rfc-editor.org/rfc/rfc9068",
+    "https://www.rfc-editor.org/rfc/rfc9700",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
+    "https://docs.cedarpolicy.com/",
+    "https://www.openpolicyagent.org/docs/policy-language"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "authnz",
+    "authorization",
+    "governance"
+  ]
+}

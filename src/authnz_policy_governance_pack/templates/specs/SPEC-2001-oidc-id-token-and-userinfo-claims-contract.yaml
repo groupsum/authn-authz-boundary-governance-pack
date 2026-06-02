@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:oidc-id-token-and-userinfo-claims-contract",
+  "number": 2001,
+  "slug": "oidc-id-token-and-userinfo-claims-contract",
+  "title": "OIDC ID Token And UserInfo Claims Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines requirements for using OIDC ID Token and UserInfo claims as identity facts.",
+  "body": "A conforming repository validates issuer, subject, audience, expiration, nonce where applicable, authentication context, authentication methods, and custom claim authority before using OIDC claims as policy input. It does not treat ID Token possession as object-level authorization.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://www.rfc-editor.org/rfc/rfc6749",
+    "https://www.rfc-editor.org/rfc/rfc9068",
+    "https://www.rfc-editor.org/rfc/rfc9700",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
+    "https://docs.cedarpolicy.com/",
+    "https://www.openpolicyagent.org/docs/policy-language"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "authnz",
+    "authorization",
+    "governance"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": []
+}

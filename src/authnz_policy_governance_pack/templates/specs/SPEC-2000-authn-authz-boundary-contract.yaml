@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:authn-authz-boundary-contract",
+  "number": 2000,
+  "slug": "authn-authz-boundary-contract",
+  "title": "AuthN AuthZ Boundary Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines required separation between authentication, token issuance, delegated authorization, and application authorization.",
+  "body": "A conforming repository declares identity providers, authentication/session surfaces, OAuth authorization servers, resource servers, and application authorization components. It documents which component authenticates a subject, which component issues or validates tokens, and which component decides resource access.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://www.rfc-editor.org/rfc/rfc6749",
+    "https://www.rfc-editor.org/rfc/rfc9068",
+    "https://www.rfc-editor.org/rfc/rfc9700",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
+    "https://docs.cedarpolicy.com/",
+    "https://www.openpolicyagent.org/docs/policy-language"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "authnz",
+    "authorization",
+    "governance"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": []
+}

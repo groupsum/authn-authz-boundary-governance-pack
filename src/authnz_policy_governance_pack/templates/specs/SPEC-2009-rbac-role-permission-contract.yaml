@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:rbac-role-permission-contract",
+  "number": 2009,
+  "slug": "rbac-role-permission-contract",
+  "title": "RBAC Role Permission Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines role, permission, inheritance, privileged-role, and separation-of-duties requirements.",
+  "body": "A conforming repository declares role definitions, role-to-permission mappings, inheritance, mutually exclusive roles, privileged roles, assignment authority, review cadence, and test evidence for role grant, role removal, and privilege boundary behavior.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://www.rfc-editor.org/rfc/rfc6749",
+    "https://www.rfc-editor.org/rfc/rfc9068",
+    "https://www.rfc-editor.org/rfc/rfc9700",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
+    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
+    "https://docs.cedarpolicy.com/",
+    "https://www.openpolicyagent.org/docs/policy-language"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "authnz",
+    "authorization",
+    "governance"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": []
+}
