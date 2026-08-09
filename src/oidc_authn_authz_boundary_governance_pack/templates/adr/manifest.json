@@ -1,0 +1,38 @@
+[
+  {
+    "id": "adr:authentication-and-authorization-are-separate-governance-surfaces",
+    "number": 1000,
+    "slug": "authentication-and-authorization-are-separate-governance-surfaces",
+    "title": "Authentication And Authorization Are Separate Governance Surfaces",
+    "filename": "ADR-1000-authentication-and-authorization-are-separate-governance-surfaces.yaml",
+    "target_path": ".ssot/adr/ADR-1000-authentication-and-authorization-are-separate-governance-surfaces.yaml",
+    "sha256": "de42f3333a9e80bd7a9ec693c9ffdc95d5f463c72149eabea1391a04b3284033",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:oidc-authn-authz-boundary-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.1.dev1",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": []
+  },
+  {
+    "id": "adr:oidc-claims-identify-subjects-not-application-permissions",
+    "number": 1001,
+    "slug": "oidc-claims-identify-subjects-not-application-permissions",
+    "title": "OIDC Claims Identify Subjects Not Application Permissions",
+    "filename": "ADR-1001-oidc-claims-identify-subjects-not-application-permissions.yaml",
+    "target_path": ".ssot/adr/ADR-1001-oidc-claims-identify-subjects-not-application-permissions.yaml",
+    "sha256": "b6d7ce42189df3026597636974038751b5226792b3f27363f89bf6f6d0390495",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:oidc-authn-authz-boundary-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.1.dev1",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": []
+  }
+]

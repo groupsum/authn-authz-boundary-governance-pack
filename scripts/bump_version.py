@@ -107,7 +107,7 @@ def main() -> int:
     parser.add_argument("--pyproject", default="pyproject.toml")
     parser.add_argument(
         "--version-file",
-        default="src/authn_authz_boundary_governance_pack/__init__.py",
+        default="src/oidc_authn_authz_boundary_governance_pack/__init__.py",
     )
     parser.add_argument("--changelog", default="CHANGELOG.md")
     parser.add_argument("--write", action="store_true")

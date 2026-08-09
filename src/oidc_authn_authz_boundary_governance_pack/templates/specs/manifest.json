@@ -1,0 +1,40 @@
+[
+  {
+    "id": "spc:authn-authz-boundary-contract",
+    "number": 2000,
+    "slug": "authn-authz-boundary-contract",
+    "title": "AuthN AuthZ Boundary Contract",
+    "filename": "SPEC-2000-authn-authz-boundary-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-2000-authn-authz-boundary-contract.yaml",
+    "sha256": "d68afe871ac2ab99f84227efcf45df4cbb6d15b232eb655809badb499ddb8f70",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:oidc-authn-authz-boundary-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.1.dev1",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "governance"
+  },
+  {
+    "id": "spc:oidc-id-token-and-userinfo-claims-contract",
+    "number": 2001,
+    "slug": "oidc-id-token-and-userinfo-claims-contract",
+    "title": "OIDC ID Token And UserInfo Claims Contract",
+    "filename": "SPEC-2001-oidc-id-token-and-userinfo-claims-contract.yaml",
+    "target_path": ".ssot/specs/SPEC-2001-oidc-id-token-and-userinfo-claims-contract.yaml",
+    "sha256": "819dcfa7cd034bde5f37f24cdad0fed28e1b50296908933f5d7aca9e55a98516",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:oidc-authn-authz-boundary-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.1.dev1",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "governance"
+  }
+]

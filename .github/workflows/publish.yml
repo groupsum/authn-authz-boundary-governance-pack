@@ -87,7 +87,7 @@ jobs:
           changelog = Path("CHANGELOG.md").read_text(encoding="utf-8")
           start = changelog.find(f"## {target}")
           if start == -1:
-              notes = f"authn-authz-boundary-governance-pack release {target}\n"
+              notes = f"oidc-authn-authz-boundary-governance-pack release {target}\n"
           else:
               rest = changelog[start:].splitlines()
               collected = []
@@ -96,7 +96,7 @@ jobs:
                       break
                   collected.append(line)
               body = "\n".join(collected).strip()
-              notes = body + "\n" if body else f"authn-authz-boundary-governance-pack release {target}\n"
+              notes = body + "\n" if body else f"oidc-authn-authz-boundary-governance-pack release {target}\n"
           Path("release-notes.md").write_text(notes, encoding="utf-8")
           PY
 
@@ -112,7 +112,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pyproject.toml CHANGELOG.md src/authn_authz_boundary_governance_pack/templates
+          git add pyproject.toml CHANGELOG.md src/oidc_authn_authz_boundary_governance_pack/templates
           git commit -m "chore(release): bump version to ${{ steps.version.outputs.version }}"
           git push origin "HEAD:${{ github.ref_name }}"
           echo "release-ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"

@@ -1,16 +1,16 @@
 <div align="center">
 
-<h1>authn-authz-boundary-governance-pack</h1>
+<h1>oidc-authn-authz-boundary-governance-pack</h1>
 
 <p>
-  <a href="https://pypi.org/project/authn-authz-boundary-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/authn-authz-boundary-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/authn-authz-boundary-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/authn-authz-boundary-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
-  <a href="https://github.com/groupsum/authn-authz-boundary-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/authn-authz-boundary-governance-pack.svg"></a>
+  <a href="https://pypi.org/project/oidc-authn-authz-boundary-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/oidc-authn-authz-boundary-governance-pack.svg"></a>
+  <a href="https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/oidc-authn-authz-boundary-governance-pack.svg"></a>
 </p>
 
 </div>
 
-`authn-authz-boundary-governance-pack` is an SSOT Registry integration pack for the trust boundary and responsibility handoff between authentication (AuthN) and authorization (AuthZ).
+`oidc-authn-authz-boundary-governance-pack` is an SSOT Registry integration pack for the trust boundary and responsibility handoff between authentication (AuthN) and authorization (AuthZ), including the safe use of OIDC ID Token and UserInfo claims as authorization inputs.
 
 It intentionally does not duplicate authenticator, session, permission, entitlement, policy-engine, or enforcement requirements. Those belong to the focused `authentication-governance-pack` and `authorization-policy-governance-pack` distributions.
 
@@ -18,7 +18,7 @@ It intentionally does not duplicate authenticator, session, permission, entitlem
 
 Authentication proves identity and authentication-event facts. Authorization independently decides whether a subject may perform an action on a resource in the current context.
 
-This pack governs only the handoff between those surfaces:
+This pack governs only the handoff between those surfaces and its OIDC identity-claim contract:
 
 - ownership of the authentication producer and authorization consumer
 - accepted identity artifacts and stable subject identifiers
@@ -28,33 +28,37 @@ This pack governs only the handoff between those surfaces:
 - tenant-context preservation and identity-data minimization
 - fail-closed behavior before policy evaluation
 - evidence that successful authentication does not imply authorization
+- validation and normalization of OIDC ID Token and UserInfo identity claims
+- rejection of claim presence, provider groups, or ID Token possession as direct application permission
 
 ## Pack Metadata
 
-- Pack ID: `pack:authn-authz-boundary`
-- PyPI package: `authn-authz-boundary-governance-pack`
-- Import package: `authn_authz_boundary_governance_pack`
-- GitHub repository: [groupsum/authn-authz-boundary-governance-pack](https://github.com/groupsum/authn-authz-boundary-governance-pack)
-- Reservation owner: `extension-pack:authn-authz-boundary-governance-pack`
+- Pack ID: `pack:oidc-authn-authz-boundary`
+- PyPI package: `oidc-authn-authz-boundary-governance-pack`
+- Import package: `oidc_authn_authz_boundary_governance_pack`
+- GitHub repository: [groupsum/oidc-authn-authz-boundary-governance-pack](https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack)
+- Reservation owner: `extension-pack:oidc-authn-authz-boundary-governance-pack`
 
 ## Included Documents
 
-- [`adr:authentication-and-authorization-are-separate-governance-surfaces`](https://github.com/groupsum/authn-authz-boundary-governance-pack/blob/master/src/authn_authz_boundary_governance_pack/templates/adr/ADR-1000-authentication-and-authorization-are-separate-governance-surfaces.yaml)
-- [`spc:authn-authz-boundary-contract`](https://github.com/groupsum/authn-authz-boundary-governance-pack/blob/master/src/authn_authz_boundary_governance_pack/templates/specs/SPEC-2000-authn-authz-boundary-contract.yaml)
+- [`adr:authentication-and-authorization-are-separate-governance-surfaces`](https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/blob/master/src/oidc_authn_authz_boundary_governance_pack/templates/adr/ADR-1000-authentication-and-authorization-are-separate-governance-surfaces.yaml)
+- [`adr:oidc-claims-identify-subjects-not-application-permissions`](https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/blob/master/src/oidc_authn_authz_boundary_governance_pack/templates/adr/ADR-1001-oidc-claims-identify-subjects-not-application-permissions.yaml)
+- [`spc:authn-authz-boundary-contract`](https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/blob/master/src/oidc_authn_authz_boundary_governance_pack/templates/specs/SPEC-2000-authn-authz-boundary-contract.yaml)
+- [`spc:oidc-id-token-and-userinfo-claims-contract`](https://github.com/groupsum/oidc-authn-authz-boundary-governance-pack/blob/master/src/oidc_authn_authz_boundary_governance_pack/templates/specs/SPEC-2001-oidc-id-token-and-userinfo-claims-contract.yaml)
 
 ## Install And Synchronize
 
 ```bash
-uv add ssot-registry authn-authz-boundary-governance-pack
-uv run ssot pack inspect authn_authz_boundary_governance_pack
-uv run ssot pack preflight . authn_authz_boundary_governance_pack --all
-uv run ssot pack sync . authn_authz_boundary_governance_pack --all --trust --yes
+uv add ssot-registry oidc-authn-authz-boundary-governance-pack
+uv run ssot pack inspect oidc_authn_authz_boundary_governance_pack
+uv run ssot pack preflight . oidc_authn_authz_boundary_governance_pack --all
+uv run ssot pack sync . oidc_authn_authz_boundary_governance_pack --all --trust --yes
 ```
 
 ## Programmatic Usage
 
 ```python
-from authn_authz_boundary_governance_pack import load_document_manifest, read_packaged_document_text
+from oidc_authn_authz_boundary_governance_pack import load_document_manifest, read_packaged_document_text
 
 adr_manifest = load_document_manifest("adr")
 spec_manifest = load_document_manifest("spec")

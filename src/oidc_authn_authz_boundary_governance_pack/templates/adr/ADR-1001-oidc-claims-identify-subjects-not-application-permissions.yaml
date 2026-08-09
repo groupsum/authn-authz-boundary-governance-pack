@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "adr",
+  "id": "adr:oidc-claims-identify-subjects-not-application-permissions",
+  "number": 1001,
+  "slug": "oidc-claims-identify-subjects-not-application-permissions",
+  "title": "OIDC Claims Identify Subjects Not Application Permissions",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "OIDC ID Token and UserInfo claims are identity assertions that may inform, but never constitute, application authorization decisions.",
+  "body": "Repositories must treat OIDC claims as asserted facts about a subject, authentication event, or identity-provider context. Before those facts cross into authorization context, the consumer must validate their issuer, audience, subject, time constraints, nonce where applicable, authentication context, authentication methods, and custom-claim authority. Claim presence, ID Token possession, successful authentication, or a provider-assigned group or role must not be interpreted as an application allow decision without an explicit authorization mapping and resource decision.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://openid.net/specs/openid-connect-eap-acr-values-1_0.html",
+    "https://pages.nist.gov/800-63-4/sp800-63c.html",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "oidc",
+    "identity-claims",
+    "authn-authz-boundary"
+  ]
+}

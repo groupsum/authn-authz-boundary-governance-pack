@@ -11,9 +11,9 @@ except ModuleNotFoundError:  # pragma: no cover
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ADR_TEMPLATES = ROOT / "src" / "authn_authz_boundary_governance_pack" / "templates" / "adr"
-SPEC_TEMPLATES = ROOT / "src" / "authn_authz_boundary_governance_pack" / "templates" / "specs"
-RESERVATION_OWNER = "extension-pack:authn-authz-boundary-governance-pack"
+ADR_TEMPLATES = ROOT / "src" / "oidc_authn_authz_boundary_governance_pack" / "templates" / "adr"
+SPEC_TEMPLATES = ROOT / "src" / "oidc_authn_authz_boundary_governance_pack" / "templates" / "specs"
+RESERVATION_OWNER = "extension-pack:oidc-authn-authz-boundary-governance-pack"
 MINIMUM_SCHEMA_VERSION = "0.4.0"
 
 

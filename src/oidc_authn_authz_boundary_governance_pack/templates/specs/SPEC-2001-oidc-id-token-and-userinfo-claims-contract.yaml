@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "kind": "spec",
+  "id": "spc:oidc-id-token-and-userinfo-claims-contract",
+  "number": 2001,
+  "slug": "oidc-id-token-and-userinfo-claims-contract",
+  "title": "OIDC ID Token And UserInfo Claims Contract",
+  "status": "accepted",
+  "origin": "extension-pack",
+  "summary": "Defines the validation, normalization, provenance, and authorization-boundary requirements for OIDC identity claims.",
+  "body": "A conforming repository declares which ID Token and UserInfo claims may cross the AuthN/AuthZ boundary and the authority for each accepted claim. It validates issuer, subject, audience, signature, expiration and other applicable time constraints, nonce where applicable, authentication context, authentication methods, and custom-claim provenance before mapping claims into policy context. It documents normalization, tenant scoping, collision handling, data minimization, freshness, revalidation, and fail-closed behavior. ID Tokens remain authentication artifacts and must not be presented to resource servers as access tokens or treated as object-level authorization. Tests and evidence must cover invalid issuers and audiences, expired assertions, subject instability, unauthorized custom claims, tenant-boundary loss, and successful authentication followed by authorization denial.",
+  "decision_date": "2026-06-02",
+  "references": [
+    "https://openid.net/specs/openid-connect-core-1_0-18.html",
+    "https://openid.net/specs/openid-connect-eap-acr-values-1_0.html",
+    "https://pages.nist.gov/800-63-4/sp800-63c.html",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final"
+  ],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [],
+  "tags": [
+    "oidc",
+    "identity-claims",
+    "authn-authz-boundary"
+  ],
+  "spec_kind": "governance",
+  "adr_ids": [
+    "adr:oidc-claims-identify-subjects-not-application-permissions"
+  ]
+}

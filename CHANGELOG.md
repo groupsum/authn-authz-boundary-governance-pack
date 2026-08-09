@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- Renamed the distribution to `authn-authz-boundary-governance-pack` and the import package to `authn_authz_boundary_governance_pack`.
+- Restored dedicated OIDC identity-claim governance at the AuthN/AuthZ boundary.
+- Renamed the distribution to `oidc-authn-authz-boundary-governance-pack` and the import package to `oidc_authn_authz_boundary_governance_pack`.
 - Reduced the pack to the AuthN/AuthZ responsibility boundary.
 - Removed authentication- and authorization-internal ADRs and SPECs duplicated by the focused governance packs.
 - Strengthened the retained boundary decision and contract around validated identity facts, provenance, failure behavior, policy inputs, and separate evidence.
