@@ -7,9 +7,9 @@ from importlib import resources
 def _package_name(kind: str) -> str:
     normalized = kind.lower()
     if normalized in {"adr", "adrs"}:
-        return "authnz_policy_governance_pack.templates.adr"
+        return "authn_authz_boundary_governance_pack.templates.adr"
     if normalized in {"spec", "specs"}:
-        return "authnz_policy_governance_pack.templates.specs"
+        return "authn_authz_boundary_governance_pack.templates.specs"
     raise ValueError(f"Unsupported document kind: {kind}")
 
 

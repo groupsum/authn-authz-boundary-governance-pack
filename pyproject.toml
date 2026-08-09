@@ -3,7 +3,7 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "authnz-policy-governance-pack"
+name = "authn-authz-boundary-governance-pack"
 version = "0.1.1.dev1"
 description = "Installable SSOT governance pack for the trust boundary and responsibility handoff between authentication and authorization."
 readme = "README.md"
@@ -57,9 +57,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/groupsum/authnz-policy-governance-pack"
-Repository = "https://github.com/groupsum/authnz-policy-governance-pack"
-Issues = "https://github.com/groupsum/authnz-policy-governance-pack/issues"
+Homepage = "https://github.com/groupsum/authn-authz-boundary-governance-pack"
+Repository = "https://github.com/groupsum/authn-authz-boundary-governance-pack"
+Issues = "https://github.com/groupsum/authn-authz-boundary-governance-pack/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -68,9 +68,9 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
-"authnz_policy_governance_pack" = ["metadata.json"]
-"authnz_policy_governance_pack.templates.adr" = ["*.json", "*.yaml"]
-"authnz_policy_governance_pack.templates.specs" = ["*.json", "*.yaml"]
+"authn_authz_boundary_governance_pack" = ["metadata.json"]
+"authn_authz_boundary_governance_pack.templates.adr" = ["*.json", "*.yaml"]
+"authn_authz_boundary_governance_pack.templates.specs" = ["*.json", "*.yaml"]
 
 [dependency-groups]
 dev = [

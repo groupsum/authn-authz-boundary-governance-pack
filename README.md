@@ -1,16 +1,16 @@
 <div align="center">
 
-<h1>authnz-policy-governance-pack</h1>
+<h1>authn-authz-boundary-governance-pack</h1>
 
 <p>
-  <a href="https://pypi.org/project/authnz-policy-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/authnz-policy-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/authnz-policy-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/authnz-policy-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
-  <a href="https://github.com/groupsum/authnz-policy-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/authnz-policy-governance-pack.svg"></a>
+  <a href="https://pypi.org/project/authn-authz-boundary-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/authn-authz-boundary-governance-pack.svg"></a>
+  <a href="https://github.com/groupsum/authn-authz-boundary-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/authn-authz-boundary-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/groupsum/authn-authz-boundary-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/authn-authz-boundary-governance-pack.svg"></a>
 </p>
 
 </div>
 
-`authnz-policy-governance-pack` is an SSOT Registry integration pack for the trust boundary and responsibility handoff between authentication (AuthN) and authorization (AuthZ).
+`authn-authz-boundary-governance-pack` is an SSOT Registry integration pack for the trust boundary and responsibility handoff between authentication (AuthN) and authorization (AuthZ).
 
 It intentionally does not duplicate authenticator, session, permission, entitlement, policy-engine, or enforcement requirements. Those belong to the focused `authentication-governance-pack` and `authorization-policy-governance-pack` distributions.
 
@@ -31,30 +31,30 @@ This pack governs only the handoff between those surfaces:
 
 ## Pack Metadata
 
-- Pack ID: `pack:authnz-policy`
-- PyPI package: `authnz-policy-governance-pack`
-- Import package: `authnz_policy_governance_pack`
-- GitHub repository: [groupsum/authnz-policy-governance-pack](https://github.com/groupsum/authnz-policy-governance-pack)
-- Reservation owner: `extension-pack:authnz-policy-governance-pack`
+- Pack ID: `pack:authn-authz-boundary`
+- PyPI package: `authn-authz-boundary-governance-pack`
+- Import package: `authn_authz_boundary_governance_pack`
+- GitHub repository: [groupsum/authn-authz-boundary-governance-pack](https://github.com/groupsum/authn-authz-boundary-governance-pack)
+- Reservation owner: `extension-pack:authn-authz-boundary-governance-pack`
 
 ## Included Documents
 
-- [`adr:authentication-and-authorization-are-separate-governance-surfaces`](https://github.com/groupsum/authnz-policy-governance-pack/blob/master/src/authnz_policy_governance_pack/templates/adr/ADR-1000-authentication-and-authorization-are-separate-governance-surfaces.yaml)
-- [`spc:authn-authz-boundary-contract`](https://github.com/groupsum/authnz-policy-governance-pack/blob/master/src/authnz_policy_governance_pack/templates/specs/SPEC-2000-authn-authz-boundary-contract.yaml)
+- [`adr:authentication-and-authorization-are-separate-governance-surfaces`](https://github.com/groupsum/authn-authz-boundary-governance-pack/blob/master/src/authn_authz_boundary_governance_pack/templates/adr/ADR-1000-authentication-and-authorization-are-separate-governance-surfaces.yaml)
+- [`spc:authn-authz-boundary-contract`](https://github.com/groupsum/authn-authz-boundary-governance-pack/blob/master/src/authn_authz_boundary_governance_pack/templates/specs/SPEC-2000-authn-authz-boundary-contract.yaml)
 
 ## Install And Synchronize
 
 ```bash
-uv add ssot-registry authnz-policy-governance-pack
-uv run ssot pack inspect authnz_policy_governance_pack
-uv run ssot pack preflight . authnz_policy_governance_pack --all
-uv run ssot pack sync . authnz_policy_governance_pack --all --trust --yes
+uv add ssot-registry authn-authz-boundary-governance-pack
+uv run ssot pack inspect authn_authz_boundary_governance_pack
+uv run ssot pack preflight . authn_authz_boundary_governance_pack --all
+uv run ssot pack sync . authn_authz_boundary_governance_pack --all --trust --yes
 ```
 
 ## Programmatic Usage
 
 ```python
-from authnz_policy_governance_pack import load_document_manifest, read_packaged_document_text
+from authn_authz_boundary_governance_pack import load_document_manifest, read_packaged_document_text
 
 adr_manifest = load_document_manifest("adr")
 spec_manifest = load_document_manifest("spec")

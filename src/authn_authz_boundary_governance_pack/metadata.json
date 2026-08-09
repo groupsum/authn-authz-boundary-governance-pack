@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "ssot_package_name": "authnz-policy-governance-pack",
+  "ssot_package_name": "authn-authz-boundary-governance-pack",
   "origin": {
-    "id": "pack:authnz-policy",
-    "package_name": "authnz-policy-governance-pack",
-    "import_name": "authnz_policy_governance_pack",
+    "id": "pack:authn-authz-boundary",
+    "package_name": "authn-authz-boundary-governance-pack",
+    "import_name": "authn_authz_boundary_governance_pack",
     "kind": "governance-pack",
     "title": "AuthN AuthZ Boundary Governance",
     "description": "Installable SSOT governance pack for the trust boundary and responsibility handoff between authentication and authorization.",
-    "homepage": "https://github.com/groupsum/authnz-policy-governance-pack",
-    "repository": "https://github.com/groupsum/authnz-policy-governance-pack"
+    "homepage": "https://github.com/groupsum/authn-authz-boundary-governance-pack",
+    "repository": "https://github.com/groupsum/authn-authz-boundary-governance-pack"
   },
   "compatibility": {
     "python": ">=3.10,<3.15",
@@ -19,7 +19,7 @@
   "trust": {
     "trusted_by_default": false,
     "origin": "extension-pack",
-    "reservation_owner": "extension-pack:authnz-policy-governance-pack"
+    "reservation_owner": "extension-pack:authn-authz-boundary-governance-pack"
   },
   "documents": {
     "adr": {

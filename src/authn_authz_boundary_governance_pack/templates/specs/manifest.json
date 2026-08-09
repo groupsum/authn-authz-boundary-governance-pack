@@ -8,7 +8,7 @@
     "target_path": ".ssot/specs/SPEC-2000-authn-authz-boundary-contract.yaml",
     "sha256": "d68afe871ac2ab99f84227efcf45df4cbb6d15b232eb655809badb499ddb8f70",
     "origin": "extension-pack",
-    "reservation_owner": "extension-pack:authnz-policy-governance-pack",
+    "reservation_owner": "extension-pack:authn-authz-boundary-governance-pack",
     "immutable": true,
     "minimum_schema_version": "0.4.0",
     "introduced_in": "0.1.1.dev1",
