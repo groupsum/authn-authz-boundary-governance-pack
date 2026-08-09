@@ -57,8 +57,8 @@ class GovernancePackManifestTests(unittest.TestCase):
     def test_pack_manifest_contract_is_exposed(self) -> None:
         manifest = load_pack_manifest()
         self.assertEqual("authnz-policy-governance-pack", manifest["metadata"]["origin"]["package_name"])
-        self.assertEqual(15, len(manifest["documents"]["adr"]))
-        self.assertEqual(20, len(manifest["documents"]["spec"]))
+        self.assertEqual(1, len(manifest["documents"]["adr"]))
+        self.assertEqual(1, len(manifest["documents"]["spec"]))
 
     def test_packaged_adr_documents_are_downstream_portable(self) -> None:
         adr_manifest = load_document_manifest("adr")

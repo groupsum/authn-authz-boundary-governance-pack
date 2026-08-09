@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "authnz-policy-governance-pack"
 version = "0.1.1.dev1"
-description = "Installable SSOT governance pack for authentication and authorization boundaries, OIDC claims, OAuth scopes, permissions, entitlements, access-control models, PDP/PEP architecture, and policy-as-code."
+description = "Installable SSOT governance pack for the trust boundary and responsibility handoff between authentication and authorization."
 readme = "README.md"
 requires-python = ">=3.10,<3.15"
 license = "Apache-2.0"
@@ -25,26 +25,14 @@ keywords = [
   "architecture-decision-records",
   "conformance",
   "compliance",
-  "authnz",
+  "authn-authz-boundary",
   "authentication",
   "authorization",
-  "oauth",
   "oidc",
   "openid-connect",
   "claims",
-  "scopes",
-  "permissions",
-  "entitlements",
-  "rbac",
-  "abac",
-  "pbac",
-  "rebac",
-  "pdp",
-  "pep",
-  "opa",
-  "rego",
-  "cedar",
-  "xacml",
+  "identity-context",
+  "trust-boundary",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",

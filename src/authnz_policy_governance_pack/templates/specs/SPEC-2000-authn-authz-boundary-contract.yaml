@@ -7,26 +7,23 @@
   "title": "AuthN AuthZ Boundary Contract",
   "status": "accepted",
   "origin": "extension-pack",
-  "summary": "Defines required separation between authentication, token issuance, delegated authorization, and application authorization.",
-  "body": "A conforming repository declares identity providers, authentication/session surfaces, OAuth authorization servers, resource servers, and application authorization components. It documents which component authenticates a subject, which component issues or validates tokens, and which component decides resource access.",
+  "summary": "Defines the governed handoff of validated authentication facts into independent authorization decisions.",
+  "body": "A conforming repository declares the authentication producer, authorization consumer, and trust boundary between them. It documents the accepted identity artifact, stable subject identifier, issuer and audience constraints, integrity validation, freshness and replay controls, authentication time, assurance and method fields, normalization rules, and behavior when any required fact is missing or invalid. The handoff must preserve provenance and tenant context, minimize disclosed identity data, and fail closed before policy evaluation when validation fails. The authorization component must combine accepted authentication facts with an explicit action, resource, and runtime context to produce its own allow or deny decision. Tests and evidence must separately demonstrate authentication-artifact rejection, boundary mapping, and denial when authentication succeeds but authorization does not grant the requested action. Detailed authenticator, session, permission, entitlement, policy-engine, and enforcement requirements are outside this boundary contract and remain owned by their dedicated governance packs.",
   "decision_date": "2026-06-02",
   "references": [
     "https://openid.net/specs/openid-connect-core-1_0-18.html",
-    "https://www.rfc-editor.org/rfc/rfc6749",
     "https://www.rfc-editor.org/rfc/rfc9068",
     "https://www.rfc-editor.org/rfc/rfc9700",
-    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
-    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
-    "https://docs.cedarpolicy.com/",
-    "https://www.openpolicyagent.org/docs/policy-language"
+    "https://pages.nist.gov/800-63-4/sp800-63c.html",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final"
   ],
   "supersedes": [],
   "superseded_by": [],
   "status_notes": [],
   "tags": [
-    "authnz",
-    "authorization",
-    "governance"
+    "authn-authz-boundary",
+    "authentication",
+    "authorization"
   ],
   "spec_kind": "governance",
   "adr_ids": []

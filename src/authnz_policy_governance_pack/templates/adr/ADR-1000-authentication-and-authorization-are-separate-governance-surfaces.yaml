@@ -7,25 +7,22 @@
   "title": "Authentication And Authorization Are Separate Governance Surfaces",
   "status": "accepted",
   "origin": "extension-pack",
-  "summary": "Identity proof, login state, token issuance, delegated authorization, and resource authorization are governed as separate surfaces.",
-  "body": "Repositories must declare authentication, OAuth token issuance, session management, and application authorization as distinct responsibilities. Identity claims can inform authorization, but successful authentication is not sufficient proof that a subject may perform a resource action.",
+  "summary": "Authentication establishes identity facts; authorization independently decides whether those facts permit a resource action.",
+  "body": "Repositories must define an explicit handoff between authentication and authorization. The authentication surface produces validated identity and authentication-event facts, including the stable subject identifier, issuer, audience, authentication time, and assurance or method indicators when applicable. The authorization surface may consume those facts as policy inputs only after validating their provenance, freshness, audience, and integrity. Successful authentication, possession of an identity token, or presence of an identity claim must never be treated as an allow decision. Authorization must not reinterpret or inflate authentication assurance. Each surface retains separate ownership, failure handling, audit evidence, and release claims; detailed controls remain governed by the dedicated authentication and authorization packs.",
   "decision_date": "2026-06-02",
   "references": [
     "https://openid.net/specs/openid-connect-core-1_0-18.html",
-    "https://www.rfc-editor.org/rfc/rfc6749",
     "https://www.rfc-editor.org/rfc/rfc9068",
     "https://www.rfc-editor.org/rfc/rfc9700",
-    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final",
-    "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
-    "https://docs.cedarpolicy.com/",
-    "https://www.openpolicyagent.org/docs/policy-language"
+    "https://pages.nist.gov/800-63-4/sp800-63c.html",
+    "https://csrc.nist.gov/pubs/sp/800/162/upd2/final"
   ],
   "supersedes": [],
   "superseded_by": [],
   "status_notes": [],
   "tags": [
-    "authnz",
-    "authorization",
-    "governance"
+    "authn-authz-boundary",
+    "authentication",
+    "authorization"
   ]
 }

@@ -6,8 +6,8 @@
     "package_name": "authnz-policy-governance-pack",
     "import_name": "authnz_policy_governance_pack",
     "kind": "governance-pack",
-    "title": "AuthNZ Policy Governance",
-    "description": "Installable SSOT governance pack for authentication and authorization boundaries, OIDC claims, OAuth scopes, permissions, entitlements, access-control models, PDP/PEP architecture, and policy-as-code.",
+    "title": "AuthN AuthZ Boundary Governance",
+    "description": "Installable SSOT governance pack for the trust boundary and responsibility handoff between authentication and authorization.",
     "homepage": "https://github.com/groupsum/authnz-policy-governance-pack",
     "repository": "https://github.com/groupsum/authnz-policy-governance-pack"
   },
