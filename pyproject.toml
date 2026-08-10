@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "oidc-authn-authz-boundary-governance-pack"
-version = "0.1.1.dev1"
+version = "0.2.0.dev1"
 description = "Installable SSOT governance pack for the AuthN/AuthZ boundary and the safe use of OIDC identity claims as authorization inputs."
 readme = "README.md"
 requires-python = ">=3.10,<3.15"

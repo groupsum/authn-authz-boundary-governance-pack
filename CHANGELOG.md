@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0.dev1
+
+- Preserved the four-document boundary while documenting specialist package ownership.
+
 ## Unreleased
 
 - Restored dedicated OIDC identity-claim governance at the AuthN/AuthZ boundary.

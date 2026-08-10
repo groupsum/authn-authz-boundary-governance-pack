@@ -34,7 +34,7 @@ wheels = [
 
 [[package]]
 name = "oidc-authn-authz-boundary-governance-pack"
-version = "0.1.1.dev1"
+version = "0.2.0.dev1"
 source = { editable = "." }
 dependencies = [
     { name = "ssot-pack-contracts" },

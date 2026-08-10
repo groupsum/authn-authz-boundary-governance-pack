@@ -12,7 +12,7 @@
 
 `oidc-authn-authz-boundary-governance-pack` is an SSOT Registry integration pack for the trust boundary and responsibility handoff between authentication (AuthN) and authorization (AuthZ), including the safe use of OIDC ID Token and UserInfo claims as authorization inputs.
 
-It intentionally does not duplicate authenticator, session, permission, entitlement, policy-engine, or enforcement requirements. Those belong to the focused `authentication-governance-pack` and `authorization-policy-governance-pack` distributions.
+It intentionally does not duplicate identity proofing, authenticator, federation, session, OAuth grant, access-token, access-control-model, policy-engine, or enforcement requirements. Those belong to the specialist governance packs linked below.
 
 ## Boundary Governed By This Pack
 
@@ -76,5 +76,19 @@ text = read_packaged_document_text("spec", "SPEC-2000-authn-authz-boundary-contr
 ## Resources
 
 - [SSOT Registry](https://pypi.org/project/ssot-registry/)
-- [Authentication governance pack](https://github.com/groupsum/authentication-governance-pack)
-- [Authorization policy governance pack](https://github.com/groupsum/authorization-policy-governance-pack)
+- [Identity proofing and enrollment](https://github.com/groupsum/identity-proofing-enrollment-governance-pack)
+- [Authenticator lifecycle](https://github.com/groupsum/authenticator-lifecycle-governance-pack)
+- [WebAuthn and FIDO](https://github.com/groupsum/webauthn-fido-governance-pack)
+- [Federated identity](https://github.com/groupsum/federated-identity-governance-pack)
+- [Session security](https://github.com/groupsum/session-security-governance-pack)
+- [OAuth delegated authorization](https://github.com/groupsum/oauth-delegated-authorization-governance-pack)
+- [Access-token validation](https://github.com/groupsum/access-token-validation-governance-pack)
+- [RBAC](https://github.com/groupsum/rbac-governance-pack)
+- [ABAC and PBAC](https://github.com/groupsum/abac-pbac-governance-pack)
+- [Relationship authorization](https://github.com/groupsum/relationship-authorization-governance-pack)
+- [Policy-decision architecture](https://github.com/groupsum/policy-decision-architecture-governance-pack)
+- [Policy as code](https://github.com/groupsum/policy-as-code-governance-pack)
+
+## Specialist package relationships
+
+This integration package remains limited to its four AuthN/AuthZ and OIDC claim-boundary documents. Protocol validation, authenticator, session, OAuth, token, and application-policy requirements are owned by the specialist governance packages.
